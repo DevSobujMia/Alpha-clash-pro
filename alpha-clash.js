@@ -94,45 +94,7 @@ function handleKeyboardKeyUpEvent(event){
             gameOver();
         }
     }
-    
-    /*
-    another way-------
-    // check > right or wrong key pressed
-    if(playerPressed === expectedAlphabet){
-        console.log('You get a point!');
-        //console.log('You have pressed correctly', expectedAlphabet);
-        
-        // update score:
-        // 1. get the current score
-        const currentScoreElement = document.getElementById('current-score');
-        const currentScoreText = currentScoreElement.innerText;
-        const currentScore = parseInt(currentScoreText);
-        console.log(currentScore);
 
-        // 2. increase the score by 1
-        const newScore = currentScore + 1;
-
-        // 3. show the update score
-        currentScoreElement.innerText = newScore;
-
-        // start a new roudn
-        removeBackgroundColorById(expectedAlphabet);
-        continueGame();
-    }
-    else{
-        console.log('You Missed. You Lost a Life');
-        // step-1: get the current life number
-        const currentLifeElement = document.getElementById('current-life');
-        const currentLifeText = currentLifeElement.innerText;
-        const currentLife = parseInt(currentLifeText);
-
-        // step-2: reduce the life count
-        const newLife = currentLife - 1;
-
-        // step-3: display the updated life count
-        currentLifeElement.innerText = newLife;
-    }
-    */
 }
 
 document.addEventListener('keyup', handleKeyboardKeyUpEvent);
@@ -178,16 +140,3 @@ function gameOver(){
     // console.log(currentAlphabet);
     removeBackgroundColorById(currentAlphabet);
 }
-
-
-//-------------- Another way ---------------
-
-// function play(){
-//     // step-1 : hide the home screen, add the hidden class on home section.
-//     const homeSection = document.getElementById('home-screen');
-//     homeSection.classList.add('hidden');
-
-//     // show playground
-//     const playgroundSection = document.getElementById('play-ground');
-//     playgroundSection.classList.remove('hidden');
-// }
